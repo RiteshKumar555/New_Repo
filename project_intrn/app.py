@@ -2,11 +2,6 @@ from flask import Flask,render_template,request
 from flask_mysqldb import MySQL
 from wtforms import Form,StringField,TextAreaField,validators
 from flask_wtf.file import FileField, FileRequired
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-%matplotlib inline
 
 app=Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
