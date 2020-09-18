@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{%block body%}
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/article.jpg') }}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="page-heading">
+          <h1>form here:</h1>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <hr>
+    
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.yourregion, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form. Atthestage, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.Reward, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.Industry, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.thestartingtime, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.ProjectContact, class_="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+{% endblock %}
